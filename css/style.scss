@@ -22,3 +22,51 @@ body{
             color: partial.$text-color;
         }
 }
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+}
+
+//Navigation
+
+header{
+    grid-column: 1/6;
+    @include partial.flex($justify: space-between);
+    background-color: partial.$nav-color;
+    border-bottom: 4px solid partial.$primary-color;
+}
+
+nav{
+    height: 4em;
+    padding: 1em;
+    @include partial.flex($justify: space-between);
+    
+        img{
+            width: 70px;
+        }
+
+        ul{
+            @include partial.flex;
+            list-style-type: none;
+        }
+
+        a {
+            color: partial.$text-color;
+            padding: partial.$padding;
+            margin: partial.$padding;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: partial.$primary-color;
+        }
+}
