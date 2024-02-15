@@ -121,3 +121,98 @@ nav{
 .bg-billede-mobil{
     display: none;
 }
+
+/*Forside*/
+
+main{
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    h2{
+        grid-column: 1/7;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .cta-wrapper{
+        grid-column: 1/7;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/*CTA bokse*/
+
+.cta-1, .cta-2, .cta-3{
+    @include partial.cta-box;
+    
+        img{
+            margin: 0 auto;
+            width: 60%;
+            display: block;
+        }
+
+        p{
+            margin-bottom: 2em;
+        }
+
+        a{
+            @include partial.btn;
+            display: block;
+
+                &:hover{
+                    background-color: partial.$secondary-color;
+                    transition: 0.4s ease-in-out;
+                }
+        }
+}
+
+/*Tekst og billede sektion*/
+
+.txt-img-section{
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.tekst{
+    grid-column: 1/5;
+    background-color: partial.$secondary-color;
+    padding: 2em 4em 4em 4em;
+
+        p{
+            color: partial.$bg-color;
+        }
+
+        p:nth-of-type(4){
+            margin-bottom: 3em;
+        }
+
+        h2{
+            color: partial.$bg-color;
+            text-align: left;
+        }
+}
+
+.secondary-btn{
+    @include partial.btn($bg-color: transparent);
+    border: 1px solid #fff;
+        
+        &:hover{
+            background-color: #fff;
+            color: partial.$secondary-color;
+            transition: 0.4s ease-in-out;
+        }
+}
+
+.billede{
+    grid-column: 5/8;
+    background-image: url(../img/presentation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Kontaktformular*/
+

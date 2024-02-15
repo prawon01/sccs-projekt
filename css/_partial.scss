@@ -24,3 +24,11 @@ $padding: 0.5em;
     text-decoration: none;
     text-align: center;
 }
+
+@mixin cta-box($width:20vw){
+    width: $width;
+    background-color: #fff;
+    padding: 2em;
+    margin: 2em auto;
+
+}
