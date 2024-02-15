@@ -205,4 +205,69 @@ main .cta-wrapper {
   background-position: center;
 }
 
-/*Kontaktformular*//*# sourceMappingURL=style.css.map */
+/*Kontaktformular*/
+.kontakt-bg-img {
+  grid-column: 1/7;
+  background: linear-gradient(rgba(142, 142, 142, 0.8), rgba(142, 142, 142, 0.8)), url(../img/meeting.jpg);
+  background-size: cover;
+}
+
+.kontaktform {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 1.3em;
+  width: 50%;
+  margin: 4em auto;
+}
+.kontaktform h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+}
+.kontaktform p {
+  margin-left: 1em;
+}
+
+.section-form {
+  display: flex;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+  width: 100%;
+  font-size: 15px;
+  padding: 1em;
+  border-radius: 4px;
+  border: 1px solid #133833;
+  box-sizing: border-box;
+  margin: 0.5em 1em 1em 1em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=submit] {
+  background-color: #3a8479;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  border: none;
+  width: 100%;
+  margin: 0 1em;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #133833;
+  transition: 0.4s ease-in-out;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}/*# sourceMappingURL=style.css.map */

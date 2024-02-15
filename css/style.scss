@@ -216,3 +216,65 @@ main{
 
 /*Kontaktformular*/
 
+.kontakt-bg-img{
+    grid-column: 1/7;
+    background: linear-gradient(rgba(142, 142, 142, 0.8), rgba(142, 142, 142, 0.8)), url(../img/meeting.jpg);
+    background-size: cover;
+}
+
+.kontaktform{
+    background-color: partial.$bg-color;
+    border-radius: 5px;
+    padding: 1.3em;
+    width: 50%;
+    margin: 4em auto;
+
+        h3{
+            font-size: 25px;
+            margin-bottom: 0;
+            margin-left: 0.5em;
+        }
+
+        p{
+            margin-left: 1em;
+        }
+}
+
+.section-form{
+    display: flex;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea{
+    width: 100%;
+    font-size: 15px;
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid partial.$secondary-color;
+    box-sizing: border-box;
+    margin: 0.5em 1em 1em 1em;
+    font-family: partial.$font;
+}
+
+input[type=submit]{
+    @include partial.btn;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    margin: 0 1em;
+    cursor: pointer;
+
+        &:hover{
+            background-color: partial.$secondary-color;
+            transition: 0.4s ease-in-out;
+        }
+}
+
+.visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
